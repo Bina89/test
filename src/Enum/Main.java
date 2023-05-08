@@ -3,7 +3,7 @@ package Enum;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+		Account a = new Account("1","預金");
 
 	}
 

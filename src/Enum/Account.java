@@ -5,6 +5,11 @@ public class Account {
 	private int zandaka;		//残高
 	private String accountType;//預金種類
 
+	public Account(String no,String type) {
+		this.accountNo = no;
+		this.accountType = type;
+	}
+
 	public void setaccountNo(String no) {this.accountNo = no;}
 	public void setzandaka(int zan) {this.zandaka = zan;}
 	public void setaccountType(String type) {this.accountType = type;}
