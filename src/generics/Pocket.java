@@ -1,10 +1,11 @@
 package generics;
 
 public class Pocket {
+	private Object data;
 
-	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+//	SetterとGetter作成
+	public void put(Object o) {this.data = o;};
+	public Object get() {return this.data;};
 
-	}
 
 }
