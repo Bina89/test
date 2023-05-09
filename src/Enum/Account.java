@@ -5,9 +5,9 @@ public class Account {
 	private int zandaka;		//残高
 	private String accountType;//預金種類
 
-	public Account(String no,String type) {
+	public Account(String no,AccountType accounttype) {
 		this.accountNo = no;
-		this.accountType = type;
+		this.accountType = accounttype;
 	}
 
 	public String toString() {return "口座番号: "+ accountNo + "\n残高: " + zandaka +  "\n預金種類: " + accountType;}
