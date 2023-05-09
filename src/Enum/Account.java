@@ -10,6 +10,8 @@ public class Account {
 		this.accountType = type;
 	}
 
+	public String toString() {return "口座番号: "+ accountNo + "\n残高: " + zandaka +  "\n預金種類: " + accountType;}
+
 	public void setaccountNo(String no) {this.accountNo = no;}
 	public void setzandaka(int zan) {this.zandaka = zan;}
 	public void setaccountType(String type) {this.accountType = type;}
