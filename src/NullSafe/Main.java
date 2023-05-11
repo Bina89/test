@@ -29,7 +29,7 @@ public class Main {
 
 		//decorateメソッドを用いて表示
 		//まずメソッドを変数に格納
-		Optional<String> op3 = decorate("うんち","💩");
+		Optional<String> op3 = decorate(null,"💩");
 		//nullを考慮して表示
 		System.out.println(op3.orElse("nullが格納されてる"));
 	}
@@ -42,7 +42,9 @@ public class Main {
 		//処理：文字列がnull、もしくは文字数が0の場合nullを返す。
 		//		正しい引数が設定された場合、文字列の両端にはさむ文字を追加する
 	public static Optional<String> decorate(String mozi,String hasamu) {
+		// ||はor
 		if(mozi == null || mozi.length() == 0) {
+			//nullのOtional型を返す
 			return Optional.empty();
 		}
 		return Optional.of(hasamu + mozi + hasamu);
