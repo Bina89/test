@@ -49,5 +49,17 @@ public class StrongBox<A> {
 	private A checkCount(int needNum) {
 		A r;
 
+		//必要な数が呼び出されているかチェック
+		if(this.count < needNum) {
+			r = null;
+		}else {
+			r = this.box;
+		}
+		return r;
+	}
+
+	//KeyType用getter
+	public KeyType getKeyType() {
+		return this.kt;
 	}
 }
