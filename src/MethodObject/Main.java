@@ -1,5 +1,6 @@
 package MethodObject;
 
+import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -30,6 +31,10 @@ public class Main {
 		//↑の引数を取らず、値を返すだけver(改行コードを返す)
 		Supplier<String>sup = System::lineSeparator;
 		con.accept("1行目"+sup.get()+"2行目");
+
+		//引数2つver<引数、引数、戻り値>			 ↓システムのプロパティ情報取得
+		BiFunction<String,String,String>bi = System::getProperty;
+		con.accept(bi.apply("user.name", "keyが正しくないです"));
 	}
 
 	//文字数を数える
