@@ -13,7 +13,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		//関数を変数に格納
+		//関数を変数に格納(格納するものは参照する)
 		//		 ↓引数  ↓戻り値 		↓Mainクラスのlenメソッドを参照
 		Function<String,Integer>func = Main::len;
 
@@ -35,6 +35,11 @@ public class Main {
 		//引数2つver<引数、引数、戻り値>			 ↓システムのプロパティ情報取得
 		BiFunction<String,String,String>bi = System::getProperty;
 		con.accept(bi.apply("user.name", "keyが正しくないです"));
+		
+		//関数インターフェースを作成することで関数を柔軟に格納できる
+		
+		
+		
 	}
 
 	//文字数を数える
