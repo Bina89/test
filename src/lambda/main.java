@@ -22,8 +22,17 @@ public class main {
 
 		//メソッドaddを格納する関数オブジェクトの作成（int型を使用することが可能なFunctionを使う）
 		IntBinaryOperator bo = main::add;
-		;
+		//表示（格納したメソッドに引数を入れる）
 		System.out.println(bo.applyAsInt(10, 90));
+
+		tryFunction<IntBinaryOperator>tf=(IntBinaryOperator ib,int a,int b) ->{
+			int result = ib.applyAsInt(a, b) + ib.applyAsInt(a, b);
+			return result;
+		};
+
+		int result = tf.apply(bo, 10, 90);
+		System.out.println(result);
+
 	}
 
 	//引数int2つ
